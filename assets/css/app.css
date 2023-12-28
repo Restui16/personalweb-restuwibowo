@@ -1,23 +1,89 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap");
+
+* {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  background-color: #f4f3f3;
+}
+
+.navbar {
+  padding: 8px;
+  background-color: white;
+  position: sticky;
+  top: 0;
+}
+
+.navbar-item {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-link {
+  display: flex;
+  flex-grow: 1;
+  gap: 20px;
+}
+
+.nav-link li a {
+  text-decoration: none;
+  color: black;
+}
+
+.active {
+  font-weight: bold;
+}
+
 .main {
-  width: 40%;
-  margin: 100px auto;
+  margin: 75px auto;
   text-align: justify;
 }
 
-.main p {
-  margin-bottom: 40px;
+.profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+}
+
+.profile .left-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  flex: 1.4;
+}
+
+.profile .left-card .download-cv {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.right-card {
+  flex: 1;
+}
+.container {
+  margin: auto;
+  width: 85%;
 }
 
 .main .cv {
   text-decoration: none;
   color: grey;
 }
+
+.card {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
 .btn {
   /* display: inline-block; */
   padding: 10px;
@@ -28,8 +94,8 @@ body {
 }
 
 .socmed {
-  font-size: 50px;
-  text-align: center;
+  margin-top: 20px;
+  font-size: 40px;
 }
 
 .socmed a {
@@ -38,18 +104,48 @@ body {
 }
 
 .profile {
-  width: 75%;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  margin: auto;
-  line-height: 5px;
-  text-align: center;
+  padding: 50px;
 }
 
-.profile img {
+.right-card {
+  overflow: hidden;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-card img {
   width: 100%;
-  height: 400px;
+  height: 350px;
   object-fit: cover;
-  object-position: top;
+  object-position: center;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.contact {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact input,
+textarea,
+select {
+  border-radius: 3px;
+  border: none;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  margin: 10px 0;
+}
+
+.contact input,
+select {
+  height: 35px;
 }
