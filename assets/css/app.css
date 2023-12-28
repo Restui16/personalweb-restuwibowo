@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.main {
+  width: 40%;
+  margin: 100px auto;
+  text-align: justify;
+}
+
+.main p {
+  margin-bottom: 40px;
+}
+
+.main .cv {
+  text-decoration: none;
+  color: grey;
+}
+.btn {
+  /* display: inline-block; */
+  padding: 10px;
+  border-radius: 50px;
+  background-color: #2d3e50;
+  color: white;
+  text-decoration: none;
+}
+
+.socmed {
+  font-size: 50px;
+  text-align: center;
+}
+
+.socmed a {
+  text-decoration: none;
+  color: black;
+}
+
+.profile {
+  width: 75%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin: auto;
+  line-height: 5px;
+  text-align: center;
+}
+
+.profile img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: top;
+}
