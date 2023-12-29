@@ -93,6 +93,11 @@ body {
   text-decoration: none;
 }
 
+.btn-submit {
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); ;
+}
+
 .socmed {
   margin-top: 20px;
   font-size: 40px;

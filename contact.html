@@ -32,26 +32,27 @@
     <section class="main">
         <h1 style="text-align: center; margin-bottom: 25px;">GET IN TOUCH</h1>
         <div class="content">
-            <form action="" class="contact">
+            <div action="" class="contact">
                 <label for="name">Name</label>
                 <input type="text" id="name">
                 <label for="email">Email</label>
                 <input type="email" id="email">
-                <label for="phone_number">Phone Number</label>
-                <input type="tel" id="phone_number">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="tel" id="phoneNumber">
                 <label for="subject">Subject</label>
                 <select id="subject">
                     <option value="" selected>Choose One</option>
-                    <option value="frontend">Frontend Developer</option>
-                    <option value="backend">Backend Developer</option>
-                    <option value="fullstack">Fullstack Developer</option>
+                    <option value="Frontend Developer">Frontend Developer</option>
+                    <option value="Backend Developer">Backend Developer</option>
+                    <option value="Fullstack Developer">Fullstack Developer</option>
                 </select>
-                <label for="your-message">Your Massage</label>
-                <textarea id="your-message" rows="5"></textarea>
-                <button type="submit" class="btn" style="width: 100px; align-self: flex-end;">Submit</button>
-            </form>
+                <label for="message">Your Massage</label>
+                <textarea id="message" rows="5"></textarea>
+                <button class="btn btn-submit" style="width: 100px; align-self: flex-end;" onclick="submitData()">Submit</button>
+            </div>
         </div>
     </section>
     
+    <script src="assets/js/app.js"></script>
 </body>
 </html>
