@@ -75,7 +75,7 @@ function rendermyProject() {
                     <div class="card" style="cursor: pointer; max-width: 300px; flex: auto; height: 470px; overflow: hidden; padding: 20px;">
                     <img src="${myProjects[i].image}" style="width: 100%; height: 45%; border-radius: 10px;">
                     <h1 style="text-transform: capitalize;">${myProjects[i].title}</h1>
-                    <h6 style="font-weight: 300;">durasi : 3 bulan</h6>
+                    <h6 style="font-weight: 300;">durasi : ${durationMonth(myProjects[i].startDate, myProjects[i].endDate)} bulan</h6>
                     <p style="text-align: justify;">${myProjects[i].description.substring(0, 120)}...</p>
                     <div class="icon-brand" style="display: flex; gap: 20px; margin-top: 20px; font-size: 30px;">
                         ${renderTechIcons}
@@ -113,3 +113,6 @@ function formatDate(dates){ //date formater d/mm/year
     return `${date} ${months[month]} ${year}`;
 }
 
+function durationMonth(startDate, endDate) {
+    return (endDate.getFullYear() - startDate.getFullYear()) * 12 + (endDate.getMonth() - startDate.getMonth());
+ }
