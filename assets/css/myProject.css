@@ -1,0 +1,23 @@
+.form-project {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 45%;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.form-project input, textarea{
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-action {
+    border-radius: 10px;
+    border: none;
+}

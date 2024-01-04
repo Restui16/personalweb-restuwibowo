@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Web | My Project</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/myProject.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <ul class="navbar-item">
+                <div class="nav-brand">
+                    <li>
+                        <a href="index.html">
+                            <img src="assets/img/dumbways.png" style="width: 50px;" alt="">
+                        </a>
+                    </li>
+                </div>
+                <div class="nav-link">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="myProject.html" class="active">My Project</a></li>
+                </div>
+                <div class="nav-button">
+                    <li><a href="contact.html" class="btn">Contact Me</a></li>
+                </div>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="main">
+        <div class="container">
+            <h1 style="text-align: center; text-transform: uppercase; font-size: px;">Add My Project</h1>
+            <div style="display: flex; justify-content: center; margin: 40px 0;">
+                <form class="form-project" onsubmit="addProject(event)">
+                    <div class="form-group">
+                        <label for="projectName">Project Name</label>
+                        <input class="text" type="text" id="projectName" style="height: 40px;" required>
+                    </div>
+
+                    <div class="" style="display: flex; justify-content: space-between; gap: 10px;">
+                        <div class="form-group" style="flex: 1;">
+                            <label for="startDate">Start Date</label>
+                            <input  class="text" type="date" id="startDate" style="height: 40px;" required>
+                        </div>
+                        
+                        <div class="form-group" style="flex: 1;">
+                            <label for="endDate">End Date</label>
+                            <input class="text" type="date" id="endDate" style="height: 40px;" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea name="" id="description"  rows="5" required></textarea>
+                    </div>
+                    
+                    <div class="form-group technologies">
+                        <label for="technologies">Technologies</label>
+                        <div class="chekbox" style="display: flex; gap: 100px;">
+                            <div class="checkbox-left" style="display: flex; flex-direction: column; gap: 7px;">
+                                <div class="">
+                                    <input type="checkbox" id="nodeJs" value="nodeJs">
+                                    <label for="nodeJs">Node Js</label>
+                                </div>
+                                <div class="">
+                                    <input type="checkbox" id="laravel" value="laravel">
+                                    <label for="laravel">Laravel</label>
+                                </div>
+                            </div>
+    
+                            <div class="checbox-right" style="display: flex; flex-direction: column; gap: 7px;">
+                                <div class="">
+                                    <input type="checkbox" id="python" value="python">
+                                    <label for="python">Python</label>
+                                </div>
+                                <div class="">
+                                    <input type="checkbox" id="reactJs" value="reactJs">
+                                    <label for="reactJs">React Js</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 
+
+                    <div class="form-group">
+                        <label for="image">Upload Image</label>
+                        <div style="background-color: white; border-radius: 4px; box-shadow: 0 5px 10px rgba(0,0,0, 0.2);">
+                            <label for="image" style="display: flex; justify-content: space-between; cursor: pointer;">
+                                <p style="padding: 10px; background-color:#E4E4E4; color: grey;" class="card">Choose</p>
+                                <img src="assets/img/icon/clip.png" style="width: 4%; padding: 10px;" alt="">
+                            </label>
+                            <input type="file" id="image" hidden required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-submit" style="align-self: flex-end; width: 30%; cursor: pointer;">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <section style="background-color: white; padding: 75px 0;" id="myProject">
+        <div class="container">
+            <h1 style="text-align: center; text-transform: uppercase; margin-bottom: 40px;">My Project</h1>
+            <div id="contents" style="display: flex; align-items: center; flex-wrap: wrap; gap: 40px">
+               
+            </div> 
+        </div>  
+    </section>
+    
+    <script src="assets/js/myProject.js"></script>
+</body>
+</html>
