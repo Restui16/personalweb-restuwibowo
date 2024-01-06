@@ -9,7 +9,7 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="container"> 
+        <div class="container">
             <ul class="navbar-item">
                 <div class="nav-brand">
                     <li>
@@ -19,40 +19,61 @@
                     </li>
                 </div>
                 <div class="nav-link">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="">My Project</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="myProject.html">My Project</a></li>
                 </div>
-                <div class="nav-button">
-                    <li><a href="contact.html" class="btn">Contact Me</a></li>
+                <div class="nav-button" style="display: flex; align-items: center;">
+                    <li><a href="contact.html" class="btn btn-contact-me active">Contact Me</a></li>
+                    <li><i class="fa-solid fa-bars fa-2x" style="cursor: pointer;" onclick="toggleHumBtn()"></i></li>
                 </div>
             </ul>
+
+            <div class="navbar-hum-menu hidden" id="navbar-hum-menu">
+                <a href="index.html">Home</a>
+                <a href="myProject.html">My Project</a>
+                <a href="contact.html" class="active">Contact Me</a>
+            </div>
         </div>
     </nav>
 
     <section class="main">
-        <h1 style="text-align: center; margin-bottom: 25px;">GET IN TOUCH</h1>
-        <div class="content">
-            <div action="" class="contact">
-                <label for="name">Name</label>
-                <input type="text" id="name">
-                <label for="email">Email</label>
-                <input type="email" id="email">
-                <label for="phoneNumber">Phone Number</label>
-                <input type="tel" id="phoneNumber">
-                <label for="subject">Subject</label>
-                <select id="subject">
-                    <option value="" selected>Choose One</option>
-                    <option value="Frontend Developer">Frontend Developer</option>
-                    <option value="Backend Developer">Backend Developer</option>
-                    <option value="Fullstack Developer">Fullstack Developer</option>
-                </select>
-                <label for="message">Your Massage</label>
-                <textarea id="message" rows="5"></textarea>
-                <button class="btn btn-submit" style="width: 100px; align-self: flex-end;" onclick="submitData()">Submit</button>
+        <div class="container">
+            <h1 style="text-align: center; margin-bottom: 25px;">GET IN TOUCH</h1>
+            <div class="contact-me-container">
+                <div action="" class="contact-me">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="tel" id="phoneNumber">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject">
+                            <option value="" selected>Choose One</option>
+                            <option value="Frontend Developer">Frontend Developer</option>
+                            <option value="Backend Developer">Backend Developer</option>
+                            <option value="Fullstack Developer">Fullstack Developer</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Massage</label>
+                        <textarea id="message" rows="5"></textarea>
+                    </div>
+                    <button class="btn btn-submit" style="width: 100px; align-self: flex-end;" onclick="submitData()">Submit</button>
+                </div>
             </div>
         </div>
     </section>
     
     <script src="assets/js/contact.js"></script>
+    <script src="assets/js/nav.js"></script>
 </body>
 </html>

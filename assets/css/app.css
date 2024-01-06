@@ -15,6 +15,7 @@ body {
   background-color: white;
   position: sticky;
   top: 0;
+  box-shadow: 5px 0 10px 5px rgba(0, 0, 0, 0.2);
 }
 
 .navbar-item {
@@ -33,6 +34,39 @@ body {
 .nav-link li a {
   text-decoration: none;
   color: black;
+}
+
+.nav-link li a:hover {
+  font-weight: bold;
+}
+
+.nav-button li:last-child {
+  display: none;
+}
+
+.navbar-hum-menu {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+  border-top: 1px solid black;
+}
+
+.navbar-hum-menu a {
+  font-size: 18px;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+  
+}
+
+.navbar-hum-menu a:hover {
+ font-weight: bold;
+}
+
+.hidden {
+  display: none;
 }
 
 .active {
@@ -59,7 +93,7 @@ body {
   flex: 1.4;
 }
 
-.profile .left-card .download-cv {
+.profile .left-card .my-contact {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -88,6 +122,9 @@ body {
   /* display: inline-block; */
   padding: 10px;
   border-radius: 50px;
+}
+
+.btn-contact-me {
   background-color: #2d3e50;
   color: white;
   text-decoration: none;
@@ -95,7 +132,9 @@ body {
 
 .btn-submit {
   border: none;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); ;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: #2d3e50;
+  color: white;
 }
 
 .socmed {
@@ -128,29 +167,128 @@ body {
   object-position: center;
 }
 
-.content {
+.contact-me-container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
 
-.contact {
-  width: 30%;
-  display: flex;
-  flex-direction: column;
+.contact-me {
+  width: 45%;
 }
 
-.contact input,
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.contact-me input,
 textarea,
 select {
   border-radius: 3px;
   border: none;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   margin: 10px 0;
+  
 }
 
-.contact input,
+.contact-me input,
 select {
-  height: 35px;
+  height: 40px;
+}
+
+.contact-me label {
+  font-weight: bold;
+}
+
+@media (max-width: 375px) {
+  
+}
+
+/* `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .nav-button li:last-child {
+    display: block;
+  }
+
+  .nav-button li:first-child {
+    display: none;
+  }
+
+  .nav-link {
+    display: none;
+  }
+
+  .navbar-item {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .profile .left-card h1 {
+    font-size: 18px;
+}
+
+.profile .left-card  p {
+  font-size: 12px;
+}
+
+.btn-contact-me {
+  padding: 5px;
+  font-size: 10px;
+}
+
+.profile .left-card .my-contact {
+  margin-top: 10px;
+  gap: 10px;
+}
+.my-contact .cv {
+  font-size: 12px;
+}
+}
+
+/* `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .profile {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .profile .left-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+    flex: 1.4;
+  }
+
+  .socmed {
+    align-self: center;
+    font-size: 35px;
+  }
+
+  .contact-me {
+    width: 100%;
+  }
+
+}
+
+/* `lg` applies to medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  .profile {
+    gap: 20px;
+  }
+  .right-card img {
+    height: 250px;
+  }
+
+}
+
+/* `xl` applies to large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+}
+
+/* `xxl` applies to x-large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {
 }

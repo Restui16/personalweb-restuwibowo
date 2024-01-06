@@ -23,44 +23,51 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="myProject.html" class="active">My Project</a></li>
                 </div>
-                <div class="nav-button">
-                    <li><a href="contact.html" class="btn">Contact Me</a></li>
+                <div class="nav-button" style="display: flex; align-items: center;">
+                    <li><a href="contact.html" class="btn btn-contact-me">Contact Me</a></li>
+                    <li><i class="fa-solid fa-bars fa-2x" style="cursor: pointer;" onclick="toggleHumBtn()"></i></li>
                 </div>
             </ul>
+
+            <div class="navbar-hum-menu hidden" id="navbar-hum-menu">
+                <a href="index.html">Home</a>
+                <a href="myProject.html" class="active">My Project</a>
+                <a href="contact.html">Contact Me</a>
+            </div>
         </div>
     </nav>
 
     <section class="main">
         <div class="container">
-            <h1 style="text-align: center; text-transform: uppercase; font-size: px;">Add My Project</h1>
-            <div style="display: flex; justify-content: center; margin: 40px 0;">
+            <h1 class="heading">Add My Project</h1>
+            <div class="form-container">
                 <form class="form-project" onsubmit="addProject(event)">
                     <div class="form-group">
                         <label for="projectName">Project Name</label>
-                        <input class="text" type="text" id="projectName" style="height: 40px;" required>
+                        <input class="text" type="text" id="projectName" required>
                     </div>
 
-                    <div class="" style="display: flex; justify-content: space-between; gap: 10px;">
+                    <div class="form-date-container">
                         <div class="form-group" style="flex: 1;">
                             <label for="startDate">Start Date</label>
-                            <input  class="text" type="date" id="startDate" style="height: 40px;" required>
+                            <input  class="text" type="date" id="startDate" required>
                         </div>
                         
                         <div class="form-group" style="flex: 1;">
                             <label for="endDate">End Date</label>
-                            <input class="text" type="date" id="endDate" style="height: 40px;" required>
+                            <input class="text" type="date" id="endDate" required>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="description">Description</label>
-                        <textarea name="" id="description"  rows="5" required></textarea>
+                        <textarea  id="description"  rows="5" required></textarea>
                     </div>
                     
                     <div class="form-group technologies">
                         <label for="technologies">Technologies</label>
-                        <div class="chekbox" style="display: flex; gap: 100px;">
-                            <div class="checkbox-left" style="display: flex; flex-direction: column; gap: 7px;">
+                        <div class="checkbox-container">
+                            <div class="checkbox-item-container checkbox-left">
                                 <div class="">
                                     <input type="checkbox" id="nodeJs" value="nodeJs">
                                     <label for="nodeJs">Node Js</label>
@@ -71,7 +78,7 @@
                                 </div>
                             </div>
     
-                            <div class="checbox-right" style="display: flex; flex-direction: column; gap: 7px;">
+                            <div class="checkbox-item-container checbox-right">
                                 <div class="">
                                     <input type="checkbox" id="python" value="python">
                                     <label for="python">Python</label>
@@ -87,12 +94,13 @@
 
                     <div class="form-group">
                         <label for="image">Upload Image</label>
-                        <div style="background-color: white; border-radius: 4px; box-shadow: 0 5px 10px rgba(0,0,0, 0.2);">
-                            <label for="image" style="display: flex; justify-content: space-between; cursor: pointer;">
-                                <p style="padding: 10px; background-color:#E4E4E4; color: grey;" class="card">Choose</p>
-                                <img src="assets/img/icon/clip.png" style="width: 4%; padding: 10px;" alt="">
+                        <div class="upload-image-container">
+                            <label for="image">
+                                <div>Choose</div>
+                                <span id="imageValue"></span>
+                                <i class="fa-solid fa-paperclip icon-clip"></i>
                             </label>
-                            <input type="file" id="image" hidden required>
+                            <input type="file" id="image" class="hidden" onchange="showImageValue()">
                         </div>
                     </div>
                     <button type="submit" class="btn btn-submit" style="align-self: flex-end; width: 30%; cursor: pointer;">Submit</button>
@@ -101,15 +109,36 @@
         </div>
     </section>
     
-    <section style="background-color: white; padding: 75px 0;" id="myProject">
+    <section id="myProject">
         <div class="container">
-            <h1 style="text-align: center; text-transform: uppercase; margin-bottom: 40px;">My Project</h1>
-            <div id="contents" style="display: flex; align-items: center; flex-wrap: wrap; gap: 40px">
-               
+            <h1 class="heading">My Project</h1>
+            <div id="myProjectContainer" class="my-project-container">
+                <!-- <a href="myProject-detail.html" class="my-project-menu">
+                    <div class="card my-project-item">
+                        <div class="left-card-project">
+                            <img src="assets/img/img1.jpg">
+                        </div>
+                        <div class="right-card-project">
+                            <h1>
+                                Lorem, ipsum dolor.
+                            </h1>
+                            <h6>Duration 3 bulan</h6>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam et laborum rem deserunt distinctio neque tempore qui impedit veritatis aliquam suscipit Lorem ipsum dolor sit amet consectetur....</p>
+                            <div class="icon-brand">
+                                <i class="fa-brands fa-react"></i>
+                            </div>
+                            <div class="btn-action-container">
+                                <button class="btn btn-action" style="flex: 1;">Edit</button>
+                                <button class="btn btn-action" style="flex: 1">Delete</button>
+                            </div>
+                        </div>
+                    </div> 
+                </a> -->
             </div> 
         </div>  
     </section>
     
     <script src="assets/js/myProject.js"></script>
+    <script src="assets/js/nav.js"></script>
 </body>
 </html>

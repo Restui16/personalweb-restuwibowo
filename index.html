@@ -22,10 +22,17 @@
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="myProject.html">My Project</a></li>
                 </div>
-                <div class="nav-button">
-                    <li><a href="contact.html" class="btn">Contact Me</a></li>
+                <div class="nav-button" style="display: flex; align-items: center;">
+                    <li><a href="contact.html" class="btn btn-contact-me">Contact Me</a></li>
+                    <li><i class="fa-solid fa-bars fa-2x" style="cursor: pointer;" onclick="toggleHumBtn()"></i></li>
                 </div>
             </ul>
+
+        </div>
+        <div class="navbar-hum-menu hidden" id="navbar-hum-menu">
+            <a href="index.html" class="active">Home</a>
+            <a href="myProject.html">My Project</a>
+            <a href="contact.html">Contact Me</a>
         </div>
     </nav>
 
@@ -36,8 +43,8 @@
                     <h1>Hi welcome to my hut</h1>
                     <p>Halo, perkenalkan, saya Restu Wibowo, lulusan ilmu komputer dari Universitas Pakuan Bogor dengan usia 25 tahun, tinggi 175cm, dan berat badan 70kg. Saya memiliki semangat belajar yang tinggi dan keyakinan bahwa kombinasi pendidikan dan pengalaman kerja saya dapat menjadi kontribusi positif di berbagai lingkungan kerja. Saya siap untuk menghadapi tantangan baru dan berkolaborasi dalam mencapai tujuan bersama. 
                     </p>
-                    <div class="download-cv">
-                        <a href="contact.html" class="btn">Contact Me</a>
+                    <div class="my-contact">
+                        <a href="contact.html" class="btn btn-contact-me">Contact Me</a>
                         <a href="#" class="cv"><h4>download CV <i class="fa-solid fa-download"></i></h4></a>
                     </div>
 
@@ -57,5 +64,6 @@
         </div>
     </section>
     
+    <script src="assets/js/nav.js"></script>
 </body>
 </html>
