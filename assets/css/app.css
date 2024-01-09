@@ -245,6 +245,12 @@ select {
   margin-left: 10px;
 }
 
+.star-active {
+  font-weight: bold;
+  background-color: white;
+  color: #2d3e50;
+}
+
 @media (max-width: 375px) {
 }
 
